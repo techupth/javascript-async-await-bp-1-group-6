@@ -1,5 +1,19 @@
 // Exercise #4
-let getJohnProfile = () => {
+/*let getJohnProfile = () => {
+  return new Promise(function (resolve) {
+    setTimeout(
+      () =>
+        resolve({
+          name: "John",
+          age: 20,
+          hobbies: ["Coding", "Football"],
+        }),
+      1000
+    );
+  });
+}; */
+// Start coding here
+let getJohnProfile = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -12,4 +26,10 @@ let getJohnProfile = () => {
     );
   });
 };
-// Start coding here
+
+async function displayJohnProfile() {
+  const profileData = await getJohnProfile();
+  console.log(profileData);
+}
+
+displayJohnProfile();
